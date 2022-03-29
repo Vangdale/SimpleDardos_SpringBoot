@@ -11,6 +11,8 @@
         <form:form action="Round" method="post">
             <input type="submit" value="Throw darts">
         </form:form>
+        <span style="float=left">Ronda ${Round}<span>
+        <br><br>
 
         <table style="width:100%">
             <thead>
@@ -20,6 +22,13 @@
                     </c:forEach>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <c:forEach var="player" items="${ListaJugadores}">
+                        <th>${player.getScore()}</th>
+                    </c:forEach>
+                </tr>
+            </tbody>
         </table>
     </body>
 </html>
