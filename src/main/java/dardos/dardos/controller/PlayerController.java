@@ -38,6 +38,7 @@ public class PlayerController {
         ModelAndView modelAndView = new ModelAndView("PlayerList");
         modelAndView.addObject("ListaJugadores", Service.Tirada());
         modelAndView.addObject("Round", Service.Ronda);
+        //modelAndView.addObject("EachRound", Service.EachRound());
 
         return modelAndView;
 

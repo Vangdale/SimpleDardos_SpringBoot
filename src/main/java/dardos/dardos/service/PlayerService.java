@@ -1,5 +1,6 @@
 package dardos.dardos.service;
 
+import dardos.dardos.model.Round;
 import org.springframework.stereotype.Service;
 
 import dardos.dardos.model.Player;
@@ -12,6 +13,7 @@ public class PlayerService {
     public List<Player> PlayerList = new ArrayList<>();
     int TurnoJugador = 0;
     int NumTiradas = 0;
+    int ScorePerRound = 0;
     public int Ronda= 1;
 
     public List<Player> AddPlayer (Player player){
@@ -23,7 +25,7 @@ public class PlayerService {
 
         while( TurnoJugador < PlayerList.size()){
             while(NumTiradas < 3){
-                PlayerList.get(TurnoJugador).setScore(PlayerList.get(TurnoJugador).getScore()+(int)(Math.random()*100));
+                PlayerList.get(TurnoJugador).setScore(PlayerList.get(TurnoJugador).getScore()+(int)(Math.random()*60));
                 NumTiradas++;
             }
             NumTiradas = 0;
@@ -34,4 +36,13 @@ public class PlayerService {
         return PlayerList;
     }
 
+    /*public List<Round> EachRound(){
+        List<Round> ronda = new ArrayList<>();
+
+        for(int i=0; i<PlayerList.size(); i++){
+            ronda.add(i,new Round(PlayerList.get(i).getScore()));
+        }
+        return ronda;
+    }
+*/
 }
