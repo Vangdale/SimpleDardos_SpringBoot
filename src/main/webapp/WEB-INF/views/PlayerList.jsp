@@ -7,7 +7,7 @@
     <head>
     </head>
     <body>
-
+        <a href="http://localhost:8080"> Añadir nuevo jugador</a>
         <form:form action="Round" method="post">
             <input type="submit" value="Throw darts">
         </form:form>

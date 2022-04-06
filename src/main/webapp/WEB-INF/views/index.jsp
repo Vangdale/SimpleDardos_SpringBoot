@@ -14,8 +14,5 @@
             <input type="submit" value="Añadir Jugador">
 
         </form:form>
-        <c:forEach var="player" items="${ListaJugadores}">
-            <p>${player.getName()}</p>
-        </c:forEach>
     </body>
 </html>
