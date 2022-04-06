@@ -25,10 +25,10 @@ public class PlayerController {
 
     @PostMapping("/PlayerList")
     public ModelAndView PostForm (Player player){
-        Service.PlayerList.add(player);
+
         ModelAndView modelAndView = new ModelAndView("PlayerList");
 
-        modelAndView.addObject("ListaJugadores", Service.PlayerList);
+        modelAndView.addObject("ListaJugadores", Service.AddPlayer(player));
         return modelAndView;
     }
 

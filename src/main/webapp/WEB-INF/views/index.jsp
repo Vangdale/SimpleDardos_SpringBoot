@@ -9,7 +9,7 @@
     <body>
         <form:form action="PlayerList" method="post" modelAttribute="player">
             <label for="name">Introduce tu nombre:</label><br><br>
-            <input type="text" id="Name" name="Name"><br><br>
+            <input path="Name "type="text" id="Name" name="Name"><br><br>
 
             <input type="submit" value="Añadir Jugador">
 
